@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-int newarray_task3(int *array, int size, int chet, int nechet) {
+int chet_nechet_dynamic_array (int *array, int size, int chet, int nechet) {
     int j{0};
     int g{0};
     int **matrix = new int*[2];
@@ -101,7 +101,7 @@ int main() {
                 nechet +=1;
             }
         }
-        newarray_task3(dynamic_arry, x, chet, nechet);
+        chet_nechet_dynamic_array(dynamic_arry, x, chet, nechet);
     }
 
 
