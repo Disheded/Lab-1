@@ -28,6 +28,10 @@ int chet_nechet_dynamic_array (int *array, int size, int chet, int nechet) {
 
     return **matrix;
 };
+void change (int &a, int &b) {
+    a = a + b;
+    b = 0;
+}
 
 
 int main() {
@@ -109,7 +113,7 @@ int main() {
 
 
 
-    } else {
+    } else if (task == 3) {
         cout <<  "Task 3" << endl;
         cout << "Dynamic arry length: ";
         int x{};
@@ -128,9 +132,26 @@ int main() {
             }
         }
         chet_nechet_dynamic_array(dynamic_arry, x, chet, nechet);
+    } else if (task == 5) {
+        cout <<  "Task 5" << endl;
+        int first{0};
+        int second{0};
+        cout << "First number: ";
+        cin >> first;
+        cout << "Second number: ";
+        cin >> second;
+        cout << "Magic....... ";
+        change(first, second);
+        cout << endl << "First number: " << first << endl;
+        cout << "Second number: " << second << endl;
+
+
+
+
+
+
     }
 
 
     return 0;
 }
-
