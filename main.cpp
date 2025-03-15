@@ -29,6 +29,7 @@ int chet_nechet_dynamic_array (int *array, int size, int chet, int nechet) {
     return **matrix;
 };
 
+
 int main() {
     int task;
     cout << "Enter the task number: ";
@@ -95,12 +96,18 @@ int main() {
         cout << "Middle element: " << middle_element << endl;
         cout << "First element: " << first_element << endl;
         cout << "Last element: " << last_element << endl;
-        
+
+        float srednee_of_first_and_last = (last_element + first_element)/2;
+        cout << "Srednee: " << srednee_of_first_and_last << endl;
+
+        middle_element = srednee_of_first_and_last;
+        cout << "Middle element: " << middle_element << endl;
 
 
 
 
-        cout << size_of_arry << the_middle_element_number <<endl;
+
+
 
     } else {
         cout <<  "Task 3" << endl;
@@ -124,6 +131,6 @@ int main() {
     }
 
 
-
     return 0;
 }
+
