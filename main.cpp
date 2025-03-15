@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-int chet_nechet_dynamic_array (int *array, int size, int chet, int nechet) {
+void chet_nechet_dynamic_array (int *array, int size, int chet, int nechet) {
     int j{0};
     int g{0};
     int **matrix = new int*[2];
@@ -26,7 +26,6 @@ int chet_nechet_dynamic_array (int *array, int size, int chet, int nechet) {
         cout << matrix[1][i] << " ";
     }
 
-    return **matrix;
 };
 void change (int &a, int &b) {
     a = a + b;
