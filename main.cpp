@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cstdlib>
+#include <ctime>
 using namespace std;
 
 void chet_nechet_dynamic_array (int *array, int size, int chet, int nechet) {
@@ -147,7 +148,47 @@ int main() {
 
     } else if (task == 6) {
         cout <<  "Task 6" << endl;
-        
+        int n;
+        cout << "Enter number of rows and columns: ";
+        cin >> n;
+        if (n%2 == 0) {
+            while (n%2 == 0) {
+                cout << "Error..."<< endl << "Number of rows and colums mus be odd" << endl << "Enter number of rows and columns: " << endl;
+                cin >> n;
+            }
+
+        }
+        int **pole = new int*[n];
+        for (int i {0}; i < n; i++) {
+            pole[i] = new int[n];
+        }
+
+        for (int i {0}; i < n; i++) {
+            for (int j {0}; j < n; j++) {
+                pole[i][j] = 0;
+            }
+        }
+        int counter{0};
+        srand(time(NULL));
+        while (counter < n) {
+            int x = 0 + rand() % (n-1);
+            int y = 0 + rand() % (n-1);
+            if (pole[x][y] == 0) {
+                pole[x][y] = 1;
+                counter++;
+            }
+        }
+
+        for (int i {0}; i < n; i++) {
+            for (int j {0}; j < n; j++) {
+                cout << pole[i][j] << " ";
+                if (j == n-1) cout<< endl;
+
+
+            }
+        }
+    } else {
+        cout << endl << "Error..." << endl << "Incorrect number of task" <<endl;
     }
 
 
