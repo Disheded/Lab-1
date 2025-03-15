@@ -33,7 +33,7 @@ int main() {
     int task;
     cout << "Enter the task number: ";
     cin >> task;
-    if (task == 1 or task == 2) {
+    if (task == 1 or task == 2 or task == 4) {
         float arry[7];
         int i {0};
 
@@ -83,6 +83,25 @@ int main() {
         cout << "Magic......." <<endl;
         cout << "Max: " << *max << endl;
         cout << "Min: " << *min << endl;
+
+        cout << endl << "Well task four is coming..." <<endl;
+
+
+        int size_of_arry = size(arry);
+        int the_middle_element_number = size_of_arry / 2;
+        float &middle_element = arry[the_middle_element_number];
+        float &first_element = arry[0];
+        float &last_element = arry[size_of_arry - 1];
+        cout << "Middle element: " << middle_element << endl;
+        cout << "First element: " << first_element << endl;
+        cout << "Last element: " << last_element << endl;
+        
+
+
+
+
+        cout << size_of_arry << the_middle_element_number <<endl;
+
     } else {
         cout <<  "Task 3" << endl;
         cout << "Dynamic arry length: ";
