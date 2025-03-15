@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cstdlib>
 using namespace std;
 
 void chet_nechet_dynamic_array (int *array, int size, int chet, int nechet) {
@@ -144,11 +145,9 @@ int main() {
         cout << endl << "First number: " << first << endl;
         cout << "Second number: " << second << endl;
 
-
-
-
-
-
+    } else if (task == 6) {
+        cout <<  "Task 6" << endl;
+        
     }
 
 
