@@ -160,9 +160,10 @@ int main() {
             int n;
             cout << "Enter number of rows and columns: ";
             cin >> n;
-            if (n%2 == 0) {
-                while (n%2 == 0) {
-                    cout << "Error..."<< endl << "Number of rows and colums mus be odd" << endl << "Enter number of rows and columns: " << endl;
+
+            if (n%2 == 0 or n == 1 or n < 0 ) {
+                while (n%2 == 0 or n == 1 or n < 0) {
+                    cout << "Error..."<< endl << "Number of rows and colums mus be odd or you wrote 1, please put the n > 1" << endl << "Enter number of rows and columns: " << endl;
                     cin >> n;
                 }
 
@@ -215,7 +216,7 @@ int main() {
             }
 
             if (pole[choosen_x][choosen_y] == 1) {
-                pole[choosen_x][choosen_y] = 88;
+                pole[choosen_x][choosen_y] = 8;
                 while (true) {
                     cout << "One more cell: ";
                     cin >> choosen_x_2;
