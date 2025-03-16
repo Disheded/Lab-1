@@ -194,7 +194,7 @@ int main() {
                     if (j == n-1) cout<< endl;
                 }
             }
-
+            cout << "PS. You will be the '8' on the map ^_~"<< endl;
 
             cout << "Choose the cell: ";
 
@@ -215,7 +215,7 @@ int main() {
             }
 
             if (pole[choosen_x][choosen_y] == 1) {
-
+                pole[choosen_x][choosen_y] = 88;
                 while (true) {
                     cout << "One more cell: ";
                     cin >> choosen_x_2;
