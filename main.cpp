@@ -33,6 +33,10 @@ void change (int &a, int &b) {
     a = a + b;
     b = 0;
 }
+void movePiece(int& x, int& y, int& newX, int& newY, int **pole){
+    pole[newX][newY] = pole[x][y];
+    pole[x][y] = 0;
+}
 
 
 int main() {
@@ -183,10 +187,57 @@ int main() {
             for (int j {0}; j < n; j++) {
                 cout << pole[i][j] << " ";
                 if (j == n-1) cout<< endl;
-
-
             }
         }
+
+
+        cout << "Choose the cell: ";
+
+        int choosen_x, choosen_y, choosen_x_2, choosen_y_2;
+        cin >> choosen_x;
+        cin >> choosen_y;
+
+        while (choosen_x >= n or choosen_y >= n) {
+            cout << "Error out of range..."<< endl << "Choose the cell: ";
+            cin >> choosen_x;
+            cin >> choosen_y;
+        }
+
+        if (pole[choosen_x][choosen_y] == 1) {
+            cout << "One more cell: ";
+
+            cin >> choosen_x_2;
+            cin >> choosen_y_2;
+
+            while (choosen_x_2 >= n or choosen_y_2 >= n) {
+                cout << "Error out of range..."<< endl << "Choose the cell: ";
+                cin >> choosen_x;
+                cin >> choosen_y;
+            }
+
+
+            while (((choosen_x == choosen_x_2 and choosen_y != choosen_y_2) or (choosen_x != choosen_x_2 and choosen_y == choosen_y_2)) == 0) {
+                cout << "Error diagonalnoe peremeschenie..."<< endl << "Choose the cell: ";
+                cin >> choosen_x_2;
+                cin >> choosen_y_2;
+            }
+
+
+
+        }
+
+        movePiece(choosen_x, choosen_y, choosen_x_2, choosen_y_2, pole);
+
+
+        for (int i {0}; i < n; i++) {
+            for (int j {0}; j < n; j++) {
+                cout << pole[i][j] << " ";
+                if (j == n-1) cout<< endl;
+            }
+        }
+
+
+
     } else {
         cout << endl << "Error..." << endl << "Incorrect number of task" <<endl;
     }
