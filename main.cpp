@@ -246,12 +246,7 @@ int main() {
                             }
                         }
                     }
-
                 }
-
-
-
-
             }
 
 
@@ -261,12 +256,6 @@ int main() {
         } else {
             cout << endl << "Error..." << endl << "Incorrect number of task" <<endl;
         }
-
-
-
-
-
-
     cout << "Start new task y/n?" << endl;
     cin >> chek;
     while (chek != 'y' and chek != 'n' and chek != 'Y' and chek != 'N') {
