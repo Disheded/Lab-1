@@ -52,7 +52,7 @@ int main() {
             float arry[7];
             int i {0};
 
-            cout << "Task 1-2" << endl;
+            cout << "Task 1, 2, 4" << endl;
             while (i<7) {
                 cout << "Enter a number "<< i+1 <<": ";
                 cin >> arry[i];
@@ -257,7 +257,7 @@ int main() {
         } else {
             cout << endl << "Error..." << endl << "Incorrect number of task" <<endl;
         }
-    cout << "Start new task y/n?" << endl;
+    cout << endl  << "Start new task y/n?" << endl;
     cin >> chek;
     while (chek != 'y' and chek != 'n' and chek != 'Y' and chek != 'N') {
         cout << "What are you wrote???" << endl << "Only y/n!!!" << endl;
